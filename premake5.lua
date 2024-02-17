@@ -1,4 +1,4 @@
-workspace "Game-Engine"
+workspace "JEngine"
 	architecture "x86_64"
 	toolset "v143"
 	cppdialect "C++20"
@@ -11,8 +11,8 @@ workspace "Game-Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Engine"
-	location "Engine"
+project "JEngine"
+	location "JEngine"
 	kind "SharedLib"
 	language "C++"
 
