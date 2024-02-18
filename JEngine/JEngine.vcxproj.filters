@@ -4,11 +4,131 @@
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Actors">
+      <UniqueIdentifier>{082C1E04-F4E3-5F51-5DEB-38AD49C2FA41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Animation">
+      <UniqueIdentifier>{5C00BBE1-C8C0-3618-91FB-7F95FD7A7BF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Components">
+      <UniqueIdentifier>{221ADC4D-0EE8-CF53-F77B-407AE3E8ABB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core">
+      <UniqueIdentifier>{A5D31CCF-91A0-77DA-BAB9-6582A6E5AC68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\DataTypes">
+      <UniqueIdentifier>{8BD4B271-F794-2EA8-C0CF-77252C4F7384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Event">
+      <UniqueIdentifier>{3E1ADFB2-AA84-9329-F3C2-44CF5F6C717E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Headers">
       <UniqueIdentifier>{D89607A6-444C-809B-CD40-7A7239F5769F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Input">
+      <UniqueIdentifier>{EC4823B3-58B3-D729-A1F1-88CF0D9BB57E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Managers">
+      <UniqueIdentifier>{AA4F78EE-96B2-0793-3F38-40492B7AD315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Physics">
+      <UniqueIdentifier>{9F8B9316-0B41-0C0C-9435-06E300EA0210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ResourceTypes">
+      <UniqueIdentifier>{794CA372-E562-A108-2EDA-2C2A9A2F7290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scene">
+      <UniqueIdentifier>{0A06D2B3-7670-862A-BFAE-37D02B58647F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Sound">
+      <UniqueIdentifier>{A5DED8B3-1149-8D2A-5A87-3ED0C6306B7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Systems">
+      <UniqueIdentifier>{34DEBD24-A093-361A-2988-30F1953C2D1E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tools">
+      <UniqueIdentifier>{6DDDEAB3-D947-9F2A-2286-50D08E2F7D7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UI">
+      <UniqueIdentifier>{3A4B661C-26ED-90F2-0FA8-A446FBE81743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\World">
+      <UniqueIdentifier>{A43321B4-109E-D52A-59DC-86D0C585B37F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Actors\Actor.h">
+      <Filter>src\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Actors\Character.h">
+      <Filter>src\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Actors\FX_BaseEffectActor.h">
+      <Filter>src\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\AnimNotify.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\Animation.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\AnimationBase.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\AnimationState.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\AnimationStateMachine.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\BlendSpace2D.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation\Transition.h">
+      <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Components.h">
+      <Filter>src\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DX11App.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DXStates.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Engine.h">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\ConstantBuffer.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\Effect.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\Skeleton.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\Socket.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\Sound.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\StructuredBuffer.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\UI.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\Vertex.h">
+      <Filter>src\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event\EventMgr.h">
+      <Filter>src\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event\Events.h">
+      <Filter>src\Event</Filter>
+    </ClInclude>
     <ClInclude Include="src\Headers\DllMacro.h">
       <Filter>src\Headers</Filter>
     </ClInclude>
@@ -21,10 +141,295 @@
     <ClInclude Include="src\Headers\stdafx.h">
       <Filter>src\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="src\Input\InputEventMgr.h">
+      <Filter>src\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Input\InputMgr.h">
+      <Filter>src\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Managers\EffectMgr.h">
+      <Filter>src\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Managers\RenderTargetMgr.h">
+      <Filter>src\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Managers\ResourceMgr.h">
+      <Filter>src\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Managers\TimeMgr.h">
+      <Filter>src\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\Collision.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\QuadTreeMgr.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\Shape.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResourceTypes\Material.h">
+      <Filter>src\ResourceTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResourceTypes\Mesh.h">
+      <Filter>src\ResourceTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResourceTypes\Shader.h">
+      <Filter>src\ResourceTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResourceTypes\Texture.h">
+      <Filter>src\ResourceTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\Scene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\SceneMgr.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sound\FmodMgr.h">
+      <Filter>src\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\AnimationSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\CameraSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\ComponentSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\EffectSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\LightingSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\MovementSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\PhysicsSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\SoundSystem.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\System.h">
+      <Filter>src\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\DataTableMgr.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\FbxLoader.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\FbxMgr.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\FbxOutData.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\FileTransfer.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\GUIMgr.h">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\WriteMgr.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\DistanceFog.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\Environment.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\GuideLine.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\InstancedObject.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\Level.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\SkySphere.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\StaticMeshLevel.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\StaticShadows.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Actors\Actor.cpp">
+      <Filter>src\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Actors\Character.cpp">
+      <Filter>src\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Actors\FX_BaseEffectActor.cpp">
+      <Filter>src\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\AnimationBase.cpp">
+      <Filter>src\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\AnimationStateMachine.cpp">
+      <Filter>src\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation\BlendSpace2D.cpp">
+      <Filter>src\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Components\Components.cpp">
+      <Filter>src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DX11App.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DXStates.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Engine.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataTypes\StructuredBuffer.cpp">
+      <Filter>src\DataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event\EventMgr.cpp">
+      <Filter>src\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event\Events.cpp">
+      <Filter>src\Event</Filter>
+    </ClCompile>
     <ClCompile Include="src\Headers\stdafx.cpp">
       <Filter>src\Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Input\InputEventMgr.cpp">
+      <Filter>src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Input\InputMgr.cpp">
+      <Filter>src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Managers\EffectMgr.cpp">
+      <Filter>src\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Managers\RenderTargetMgr.cpp">
+      <Filter>src\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Managers\ResourceMgr.cpp">
+      <Filter>src\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Managers\TimeMgr.cpp">
+      <Filter>src\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\Collision.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\QuadTreeMgr.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\Shape.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceTypes\Material.cpp">
+      <Filter>src\ResourceTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceTypes\Mesh.cpp">
+      <Filter>src\ResourceTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceTypes\Shader.cpp">
+      <Filter>src\ResourceTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceTypes\Texture.cpp">
+      <Filter>src\ResourceTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Scene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\SceneMgr.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sound\FmodMgr.cpp">
+      <Filter>src\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\AnimationSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\CameraSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\ComponentSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\EffectSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\LightingSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\MovementSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\PhysicsSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\RenderSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\SoundSystem.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Systems\System.cpp">
+      <Filter>src\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools\DataTableMgr.cpp">
+      <Filter>src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools\FbxLoader.cpp">
+      <Filter>src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools\FbxMgr.cpp">
+      <Filter>src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools\FbxOutData.cpp">
+      <Filter>src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools\FileTransfer.cpp">
+      <Filter>src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools\GUIMgr.cpp">
+      <Filter>src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\WriteMgr.cpp">
+      <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\DistanceFog.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\Environment.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\GuideLine.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\InstancedObject.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\Level.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\SkySphere.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\StaticMeshLevel.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\StaticShadows.cpp">
+      <Filter>src\World</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
