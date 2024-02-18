@@ -88,11 +88,11 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Engine.lib;fmod_vc.lib;fmodL_vc.lib;libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;ImGui_Win32_Dx11_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmod_vc.lib;fmodL_vc.lib;libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;ImGui_Win32_Dx11_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\output\bin\Debug-windows-x86_64\Engine;..\..\SDK\DirectXTK\lib;..\..\SDK\IMGUI\lib;..\..\SDK\RP3D\lib;..\..\SDK\FBXSDK\lib\debug;..\..\SDK\FMOD\lib\debug;..\..\output\bin\Debug-windows-x86_64\JEngine;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>copy "..\..\output\bin\Debug-windows-x86_64\Engine\*.dll" "..\..\output\bin\Debug-windows-x86_64\TestProject\*.dll"
+      <Command>copy "..\..\output\bin\Debug-windows-x86_64\JEngine\*.dll" "..\..\output\bin\Debug-windows-x86_64\TestProject\*.dll"
 copy "..\..\SDK\FMOD\lib\debug\*.dll" "..\..\output\bin\Debug-windows-x86_64\TestProject\*.dll"</Command>
     </PreBuildEvent>
     <PostBuildEvent>
@@ -117,12 +117,9 @@ copy "..\..\SDK\FMOD\lib\debug\*.dll" "..\..\output\bin\Debug-windows-x86_64\Tes
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Engine.lib;fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\output\bin\Debug-windows-x86_64\Engine;..\..\SDK\DirectXTK\lib;..\..\SDK\IMGUI\lib;..\..\SDK\RP3D\lib;..\..\SDK\FBXSDK\lib\release;..\..\SDK\FMOD\lib\release;..\..\output\bin\Release-windows-x86_64\Engine;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\output\bin\Debug-windows-x86_64\Engine;..\..\SDK\DirectXTK\lib;..\..\SDK\IMGUI\lib;..\..\SDK\RP3D\lib;..\..\SDK\FBXSDK\lib\release;..\..\SDK\FMOD\lib\release;..\..\output\bin\Release-windows-x86_64\JEngine;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
     <PreBuildEvent>
       <Command>copy "..\..\output\bin\Release-windows-x86_64\JEngine\*.dll" "..\..\output\bin\Release-windows-x86_64\TestProject\*.dll"
 copy "..\..\SDK\FBXSDK\lib\release\*.dll" "..\..\output\bin\Release-windows-x86_64\TestProject\*.dll"</Command>
@@ -149,20 +146,128 @@ copy "..\..\SDK\FBXSDK\lib\release\*.dll" "..\..\output\bin\Release-windows-x86_
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Engine.lib;fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\output\bin\Debug-windows-x86_64\Engine;..\..\SDK\DirectXTK\lib;..\..\SDK\IMGUI\lib;..\..\SDK\RP3D\lib;..\..\SDK\FBXSDK\lib\release;..\..\SDK\FMOD\lib\release;..\..\output\bin\Dist-windows-x86_64\Engine;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\output\bin\Debug-windows-x86_64\Engine;..\..\SDK\DirectXTK\lib;..\..\SDK\IMGUI\lib;..\..\SDK\RP3D\lib;..\..\SDK\FBXSDK\lib\release;..\..\SDK\FMOD\lib\release;..\..\output\bin\Dist-windows-x86_64\JEngine;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
     <PreBuildEvent>
-      <Command>copy "..\..\output\bin\Dist-windows-x86_64\Engine\*.dll" "..\..\output\bin\Dist-windows-x86_64\TestProject\*.dll"
+      <Command>copy "..\..\output\bin\Dist-windows-x86_64\JEngine\*.dll" "..\..\output\bin\Dist-windows-x86_64\TestProject\*.dll"
 copy "..\..\SDK\FBXSDK\lib\release\*.dll" "..\..\output\bin\Release-windows-x86_64\TestProject\*.dll"</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy "..\..\output\bin\Dist-windows-x86_64\TestProject\*.cso" "..\..\Contents\Shader\*.cso"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\GUI\TestWidget.h" />
+    <ClInclude Include="src\Scenes\TestScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\GUI\TestWidget.cpp" />
+    <ClCompile Include="src\Scenes\TestScene.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="HLSL\BaseColorPS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\CollisionMeshVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\DepthMapVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\EffectDefaultPS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\EffectDefaultVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\EffectParticleGS.hlsl">
+      <ShaderType>Geometry</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>GS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\EffectParticleGlowPS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\EffectParticleNoBillboardGS.hlsl">
+      <ShaderType>Geometry</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>GS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\InstancingVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\LevelPS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\LevelVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\MeshSurfacePS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\PhysicsCS.hlsl">
+      <ShaderType>Compute</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>CS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\SkinningPS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\SkinningVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\SkySpherePS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\SkySphereVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\StaticMeshVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\UIPS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>PS</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="HLSL\UIVS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <EntryPointName>VS</EntryPointName>
+    </FxCompile>
+  </ItemGroup>
   <ItemGroup>
     <None Include="..\premake5.lua" />
   </ItemGroup>

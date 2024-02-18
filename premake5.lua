@@ -217,7 +217,7 @@ project "TestProject"
 
 	links
 	{
-		"Engine",
+		"JEngine",
 		"fmod_vc",
 		"fmodL_vc",
 	}
@@ -275,7 +275,7 @@ project "TestProject"
 
 		prebuildcommands
 		{
-			"copy \"..\\..\\output\\bin\\Debug-windows-x86_64\\Engine\\*.dll\" \"..\\..\\output\\bin\\Debug-windows-x86_64\\TestProject\\*.dll\"",
+			"copy \"..\\..\\output\\bin\\Debug-windows-x86_64\\JEngine\\*.dll\" \"..\\..\\output\\bin\\Debug-windows-x86_64\\TestProject\\*.dll\"",
 			"copy \"..\\..\\SDK\\FMOD\\lib\\debug\\*.dll\" \"..\\..\\output\\bin\\Debug-windows-x86_64\\TestProject\\*.dll\""
 		}
 
@@ -293,7 +293,7 @@ project "TestProject"
 		{
 			"../SDK/FBXSDK/lib/release",
 			"../SDK/FMOD/lib/release",
-			"../output/bin/Release-windows-x86_64/Engine/",
+			"../output/bin/Release-windows-x86_64/JEngine/",
 		}
 
 		prebuildcommands
@@ -316,12 +316,12 @@ project "TestProject"
 		{
 			"../SDK/FBXSDK/lib/release",
 			"../SDK/FMOD/lib/release",
-			"../output/bin/Dist-windows-x86_64/Engine/",
+			"../output/bin/Dist-windows-x86_64/JEngine/",
 		}
 
 		prebuildcommands
 		{
-			"copy \"..\\..\\output\\bin\\Dist-windows-x86_64\\Engine\\*.dll\" \"..\\..\\output\\bin\\Dist-windows-x86_64\\TestProject\\*.dll\"",
+			"copy \"..\\..\\output\\bin\\Dist-windows-x86_64\\JEngine\\*.dll\" \"..\\..\\output\\bin\\Dist-windows-x86_64\\TestProject\\*.dll\"",
 			"copy \"..\\..\\SDK\\FBXSDK\\lib\\release\\*.dll\" \"..\\..\\output\\bin\\Release-windows-x86_64\\TestProject\\*.dll\""
 		}
 
