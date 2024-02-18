@@ -123,6 +123,9 @@
     <ClInclude Include="src\DataTypes\Vertex.h">
       <Filter>src\DataTypes</Filter>
     </ClInclude>
+    <ClInclude Include="src\Engine_include.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\Event\EventMgr.h">
       <Filter>src\Event</Filter>
     </ClInclude>

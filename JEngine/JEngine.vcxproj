@@ -165,6 +165,7 @@
     <ClInclude Include="src\DataTypes\StructuredBuffer.h" />
     <ClInclude Include="src\DataTypes\UI.h" />
     <ClInclude Include="src\DataTypes\Vertex.h" />
+    <ClInclude Include="src\Engine_include.h" />
     <ClInclude Include="src\Event\EventMgr.h" />
     <ClInclude Include="src\Event\Events.h" />
     <ClInclude Include="src\Headers\DllMacro.h" />
