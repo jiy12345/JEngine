@@ -20,7 +20,7 @@ project "JEngine"
 	objdir("../output/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "stdafx.h"
-    pchsource "Engine/src/Headers/stdafx.cpp"
+    pchsource "JEngine/src/Headers/stdafx.cpp"
 
 	files
 	{
@@ -146,4 +146,186 @@ project "JEngine"
 		links
 		{
 			"DirectXTK"
+		}
+
+project "TestProject"
+	location "TestProject"
+	kind "WindowedApp"
+	language "C++"
+
+	targetdir("../output/bin/" .. outputdir .. "/%{prj.name}")
+	objdir("../output/bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"premake5.lua",
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/HLSL/**.hlsl"
+	} 
+
+	includedirs
+	{
+		"../JEngine/JEngine/src/Actors",
+		"../JEngine/JEngine/src/Animation",
+		"../JEngine/JEngine/src/Components",
+		"../JEngine/JEngine/src/Core",
+		"../JEngine/JEngine/src/DataTypes",
+		"../JEngine/JEngine/src/Headers",
+		"../JEngine/JEngine/src/Physics",
+		"../JEngine/JEngine/src/ResourceTypes",
+		"../JEngine/JEngine/src/Systems",
+		"../JEngine/JEngine/src/Tools",
+		"../JEngine/JEngine/src/UI",
+		"../JEngine/JEngine/src/World",
+		"../JEngine/JEngine/src/Event",
+		"../JEngine/JEngine/src/Scene",
+		"../JEngine/JEngine/src/Sound",
+		"../JEngine/JEngine/src/Input",
+		"../JEngine/JEngine/src/Managers",
+		"../JEngine/JEngine/src",
+		"../JEngine/JEngine/vendor/spdlog/include",
+		"TestProject/src/Actors",
+		"TestProject/src/Actors/AI",
+		"TestProject/src/Actors/Animation",
+		"TestProject/src/Actors/Enemies",
+		"TestProject/src/Systems",
+		"TestProject/src/Events",
+		"TestProject/src/FX",
+		"TestProject/src/GUI",
+		"TestProject/src/Scenes",
+		"TestProject/src/UI",
+		"TestProject/src/Item",
+		"TestProject/src/UI/EndingScene",
+		"TestProject/src/UI/InGameScene",
+		"TestProject/src/UI/StartScene",
+		"TestProject/src/UI/PopScene",
+		"../SDK/DirectXTK/include",
+		"../SDK/FBXSDK/include",
+		"../SDK/FMOD/include",
+		"../SDK/IMGUI/include",
+		"../SDK/RP3D/include"
+	}
+
+	libdirs
+	{
+		"../output/bin/Debug-windows-x86_64/Engine/",
+		"../SDK/DirectXTK/lib",
+		"../SDK/IMGUI/lib",
+		"../SDK/RP3D/lib"
+	}
+
+	links
+	{
+		"Engine",
+		"fmod_vc",
+		"fmodL_vc",
+	}
+
+	filter "files:**VS.hlsl"
+		shadertype "Vertex"
+		shaderentry "VS"
+	    shadermodel "5.0"
+
+	filter "files:**PS.hlsl"
+	    shadertype "Pixel"
+		shaderentry "PS"
+	    shadermodel "5.0"
+
+	filter "files:**GS.hlsl"
+	    shadertype "Geometry"
+		shaderentry "GS"
+	    shadermodel "5.0"
+
+	filter "files:**CS.hlsl"
+	    shadertype "Compute"
+		shaderentry "CS"
+	    shadermodel "5.0"
+
+	filter "system:windows"
+		cppdialect "C++20"
+		staticruntime "Off"
+		systemversion "latest"
+
+		defines
+		{
+			"PLATFORM_WINDOWS"
+		}
+
+	filter "configurations:Debug"
+		defines "_DEBUG"
+		symbols "On"
+		runtime "Debug"
+
+		libdirs
+		{
+			"../SDK/FBXSDK/lib/debug",
+			"../SDK/FMOD/lib/debug",
+			"../output/bin/Debug-windows-x86_64/JEngine/",
+		}
+
+		links
+		{
+			"JEngine",
+			"libfbxsdk-md",
+			"libxml2-md",
+			"zlib-md",
+			"ImGui_Win32_Dx11_D"
+		}
+
+		prebuildcommands
+		{
+			"copy \"..\\..\\output\\bin\\Debug-windows-x86_64\\Engine\\*.dll\" \"..\\..\\output\\bin\\Debug-windows-x86_64\\TestProject\\*.dll\"",
+			"copy \"..\\..\\SDK\\FMOD\\lib\\debug\\*.dll\" \"..\\..\\output\\bin\\Debug-windows-x86_64\\TestProject\\*.dll\""
+		}
+
+		postbuildcommands
+		{
+			"copy \"..\\..\\output\\bin\\Debug-windows-x86_64\\TestProject\\*.cso\" \"..\\..\\Contents\\Shader\\*.cso\"",
+		}
+
+	filter "configurations:Release"
+		defines "_RELEASE"
+		optimize "On"
+		runtime "Release"
+
+		libdirs
+		{
+			"../SDK/FBXSDK/lib/release",
+			"../SDK/FMOD/lib/release",
+			"../output/bin/Release-windows-x86_64/Engine/",
+		}
+
+		prebuildcommands
+		{
+			"copy \"..\\..\\output\\bin\\Release-windows-x86_64\\JEngine\\*.dll\" \"..\\..\\output\\bin\\Release-windows-x86_64\\TestProject\\*.dll\"",
+			"copy \"..\\..\\SDK\\FBXSDK\\lib\\release\\*.dll\" \"..\\..\\output\\bin\\Release-windows-x86_64\\TestProject\\*.dll\""
+		}
+
+		postbuildcommands
+		{
+			"copy \"..\\..\\output\\bin\\Release-windows-x86_64\\TestProject\\*.cso\" \"..\\..\\Contents\\Shader\\*.cso\"",
+		}
+
+	filter "configurations:Dist"
+		defines "_DIST"
+		optimize "On"
+		runtime "Release"
+
+		libdirs
+		{
+			"../SDK/FBXSDK/lib/release",
+			"../SDK/FMOD/lib/release",
+			"../output/bin/Dist-windows-x86_64/Engine/",
+		}
+
+		prebuildcommands
+		{
+			"copy \"..\\..\\output\\bin\\Dist-windows-x86_64\\Engine\\*.dll\" \"..\\..\\output\\bin\\Dist-windows-x86_64\\TestProject\\*.dll\"",
+			"copy \"..\\..\\SDK\\FBXSDK\\lib\\release\\*.dll\" \"..\\..\\output\\bin\\Release-windows-x86_64\\TestProject\\*.dll\""
+		}
+
+		postbuildcommands
+		{
+			"copy \"..\\..\\output\\bin\\Dist-windows-x86_64\\TestProject\\*.cso\" \"..\\..\\Contents\\Shader\\*.cso\"",
 		}
